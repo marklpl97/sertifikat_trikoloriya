@@ -87,26 +87,17 @@
   }
   .content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column}
   .brand{
-    display:flex;align-items:center;gap:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-bottom:3%;
   }
-  .logo{
-    width:82px;height:82px;border-radius:14px;
-    background:#ead7b5;
-    display:grid;place-items:center;
-    font-family:Georgia,serif;font-size:48px;color:var(--gold);
-    position:relative;flex:none;
-  }
-  .logo:before{
-    content:"";position:absolute;left:-38px;top:39px;
-    width:75px;height:30px;border-top:2px solid var(--gold);
-    border-radius:50%;transform:rotate(-9deg);
-  }
-  .brand-name{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:clamp(19px,4vw,29px);
-    line-height:.98;
-    letter-spacing:.5px;
+  .brand-logo{
+    max-height:110px;
+    width:auto;
+    max-width:100%;
+    display:block;
+    object-fit:contain;
   }
 
   /* ===== ИЗМЕНЕНО: заголовки СЕРТИФИКАТ / НА СКИДКУ ===== */
@@ -236,9 +227,8 @@
       gap: 1%;
     }
     .brand{margin-bottom:2%}
-    .logo{width:60px;height:60px;font-size:36px;border-radius:10px}
-    .logo:before{display:none}
-    .brand-name{font-size:22px}
+    .brand-logo{max-height:80px}
+    .brand-logo{mix-blend-mode:multiply}
     .title{font-size:42px;min-height:44px;margin:0.5% 0 0.2%}
     .subtitle{font-size:36px;min-height:38px}
     .number{font-size:28px;margin:0.5% 0 1.5%}
@@ -298,8 +288,7 @@
     <section class="certificate" id="certificate">
       <div class="content">
         <div class="brand">
-          <div class="logo">ТК</div>
-          <div class="brand-name">ТРИКОЛОРИЯ<br>КОМФОРТА</div>
+        <img src="logoterrcomfort.png" alt="Триколория Комфорта" class="brand-logo">
         </div>
 
         <div class="title">СЕРТИФИКАТ</div>
@@ -462,21 +451,8 @@ function printInNewTab(){
     }
     .content{position:relative;z-index:2;display:flex;flex-direction:column}
     .brand{display:flex;align-items:center;gap:15px;margin-bottom:3%}
-    .logo{
-      width:82px;height:82px;border-radius:14px;background:#ead7b5;
-      display:grid;place-items:center;
-      font-family:Georgia,serif;font-size:48px;color:var(--gold);
-      position:relative;flex:none;
-    }
-    .logo:before{
-      content:"";position:absolute;left:-38px;top:39px;
-      width:75px;height:30px;border-top:2px solid var(--gold);
-      border-radius:50%;transform:rotate(-9deg);
-    }
-    .brand-name{
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(19px,4vw,29px);line-height:.98;letter-spacing:.5px;
-    }
+    .brand{display:flex;justify-content:center;align-items:center;margin-bottom:3%}
+    .brand-logo{max-height:110px;width:auto;max-width:100%;display:block;object-fit:contain}
     .title{
       text-align:center;font-size:clamp(28px,6vw,48px);line-height:1.02;
       font-weight:700;color:var(--gold);margin:1% 0 0.3%;letter-spacing:1px;
@@ -531,9 +507,7 @@ function printInNewTab(){
       }
       .content{gap:1%}
       .brand{margin-bottom:2%}
-      .logo{width:60px;height:60px;font-size:36px;border-radius:10px}
-      .logo:before{display:none}
-      .brand-name{font-size:22px}
+      .brand-logo{max-height:80px}
       .title{font-size:42px;min-height:44px;margin:0.5% 0 0.2%}
       .subtitle{font-size:36px;min-height:38px}
       .number{font-size:28px;margin:0.5% 0 1.5%}
